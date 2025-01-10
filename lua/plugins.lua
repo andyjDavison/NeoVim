@@ -2,9 +2,9 @@
 -- PLUGINS --
 -------------
 
-local PATH = "~/.vim/plugged"
+local PATH = "~\\AppData\\Local\\nvim-data\\site\\autoload"
 local Plug = vim.fn['plug#']
-require('config.nvim-cmp')
+-- require('config.nvim-cmp')
 vim.call('plug#begin', PATH)
 
     Plug 'nvim-tree/nvim-tree.lua'
@@ -27,12 +27,16 @@ vim.call('plug#begin', PATH)
     Plug 'L3MON4D3/LuaSnip'
     Plug "rafamadriz/friendly-snippets"
     Plug ('akinsho/bufferline.nvim', {['tag'] = '*' })
+    Plug 'neovim/nvim-lspconfig'
 
 vim.call('plug#end')
 
 ------------------
 -- Plugin Setup --
 ------------------
+
+-- DevIcons Config -----------------------------------------------------------
+require('nvim-web-devicons').setup()
 
 -- Tree Setup ----------------------------------------------------------------
 vim.g.loaded_netrw = 1
@@ -120,3 +124,4 @@ require('bufferline').setup {
         }
     }
 }
+

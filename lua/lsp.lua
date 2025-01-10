@@ -21,7 +21,7 @@ lspconfig.cssls.setup {
     capabilities = lsp_capabilities
 }
 
-lspconfig.tsserver.setup{}
+lspconfig.ts_ls.setup{}
 
 lspconfig.eslint.setup{}
 
@@ -32,6 +32,8 @@ lspconfig.pyright.setup{}
 lspconfig.bashls.setup{}
 
 lspconfig.cmake.setup{}
+
+lspconfig.java_language_server.setup{}
 
 vim.api.nvim_create_autocmd('LspAttach', {
     desc = 'LSP actions',
