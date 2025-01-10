@@ -9,6 +9,21 @@ Written in Lua, and portable on both Windows and Linux, it offers:
 - Buffer Windows/Tabs
 - Ability to use system clipboard to copy/paste from outside nvim environment
 
+## Fonts
+All of the fonts I use for this terminal are from ![NerdFonts](https://www.nerdfonts.com/font-downloads). You must have a font installed to be able to see the Icons for this IDE.
+
+## Code Completion
+The Code completion comes with a few preset languagues, but any can be added and removed. The languages are:
+- ![C/C++](https://github.com/regen100/cmake-language-server)
+- ![Java](https://github.com/georgewfraser/java-language-server)
+- ![Python](https://github.com/microsoft/pyright)
+- ![JavaScript (including JSX)]()
+- ![TypeScript (including TSX)](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ts_ls)
+- ![HTML/CSS]()
+- ![Bash](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#bashls)  
+  
+To Install these Language Servers I use the neovim/nvim-lsp plugin, which is available ![here](https://github.com/neovim/nvim-lspconfig). For each language you have to install the Language Server onto your own machine, all information on installing these servers is available ![here](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md).
+
 ## Basic Layout
 ![alt](img/nvim.png)
 
