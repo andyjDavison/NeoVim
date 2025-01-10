@@ -9,6 +9,9 @@ Written in Lua, and portable on both Windows and Linux, it offers:
 - Buffer Windows/Tabs
 - Ability to use system clipboard to copy/paste from outside nvim environment
 
+## Plugins!!
+To install the plugins I use ![vim-plug](https://github.com/junegunn/vim-plug). To set this up on your machine follow the instructions on the repo.
+
 ## Fonts
 All of the fonts I use for this terminal are from ![NerdFonts](https://www.nerdfonts.com/font-downloads). You must have a font installed to be able to see the Icons for this IDE.
 
