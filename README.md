@@ -20,9 +20,9 @@ The Code completion comes with a few preset languagues, but any can be added and
 - ![C/C++](https://github.com/regen100/cmake-language-server)
 - ![Java](https://github.com/georgewfraser/java-language-server)
 - ![Python](https://github.com/microsoft/pyright)
-- ![JavaScript (including JSX)]()
+- ![JavaScript (including JSX)](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#eslint)
 - ![TypeScript (including TSX)](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ts_ls)
-- ![HTML/CSS]()
+- ![HTML/CSS](https://github.com/hrsh7th/vscode-langservers-extracted)
 - ![Bash](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#bashls)  
   
 To Install these Language Servers I use the ![neovim/nvim-lsp](https://github.com/neovim/nvim-lspconfig) plugin. For each language you have to install the Language Server onto your own machine, all information on installing these servers is available ![here](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md).
