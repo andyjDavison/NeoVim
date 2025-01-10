@@ -25,7 +25,7 @@ The Code completion comes with a few preset languagues, but any can be added and
 - ![HTML/CSS]()
 - ![Bash](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#bashls)  
   
-To Install these Language Servers I use the neovim/nvim-lsp plugin, which is available ![here](https://github.com/neovim/nvim-lspconfig). For each language you have to install the Language Server onto your own machine, all information on installing these servers is available ![here](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md).
+To Install these Language Servers I use the ![neovim/nvim-lsp](https://github.com/neovim/nvim-lspconfig) plugin. For each language you have to install the Language Server onto your own machine, all information on installing these servers is available ![here](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md).
 
 ## Basic Layout
 ![alt](img/nvim.png)
