@@ -3,6 +3,22 @@
 -----------------------
 
 local lspconfig = require('lspconfig')
+
+vim.diagnostic.config({
+  virtual_text = false,
+  update_in_insert = true
+})
+
+local signs = { Error = "󰅚 ", Warn = "󰀪 ", Hint = "󰌶 ", Info = " " }
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
+
+-- Show line diagnostics automatically in hover window
+vim.o.updatetime = 250
+vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+
 local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 lspconfig.html.setup {
@@ -34,6 +50,10 @@ lspconfig.bashls.setup{}
 lspconfig.cmake.setup{}
 
 lspconfig.java_language_server.setup{}
+
+lspconfig.csharp_ls.setup{}
+
+lspconfig.sqlls.setup{}
 
 vim.api.nvim_create_autocmd('LspAttach', {
     desc = 'LSP actions',

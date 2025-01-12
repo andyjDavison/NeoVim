@@ -2,6 +2,7 @@
 -- PLUGINS --
 -------------
 
+-- local PATH = "~/.vim/plugged" Uncomment this for UNIX/Linux
 local PATH = "~\\AppData\\Local\\nvim-data\\site\\autoload"
 local Plug = vim.fn['plug#']
 -- require('config.nvim-cmp')
@@ -12,6 +13,7 @@ vim.call('plug#begin', PATH)
     Plug 'nvim-lualine/lualine.nvim'
     Plug 'rebelot/kanagawa.nvim'
     Plug ('bluz71/vim-moonfly-colors', {as = 'moonfly'})
+    Plug ("folke/tokyonight.nvim", {as = 'tokyonight'})
     Plug 'tpope/vim-endwise'
     Plug 'rstacruz/vim-closer'
     Plug ("akinsho/toggleterm.nvim", {['tag'] = '*' })
@@ -28,6 +30,7 @@ vim.call('plug#begin', PATH)
     Plug "rafamadriz/friendly-snippets"
     Plug ('akinsho/bufferline.nvim', {['tag'] = '*' })
     Plug 'neovim/nvim-lspconfig'
+    Plug 'goolord/alpha-nvim'
 
 vim.call('plug#end')
 
@@ -42,7 +45,16 @@ require('nvim-web-devicons').setup()
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-require("nvim-tree").setup()
+require("nvim-tree").setup{
+    diagnostics = {
+        enable = true,
+    },
+    renderer = {
+        indent_markers = {
+            enable = true
+        }
+    }
+}
     if vim.fn.argc(-1) == 0 then
         vim.cmd("NvimTreeOpen")
     end
@@ -61,13 +73,15 @@ require('pears').setup()
 require('nvim-treesitter.configs').setup {
     highlight = {
         enable = true
-    }
+    },
+    -- ensure_installed = {'c', 'lua', 'cpp', 'java', 'javascript'}
 }
 
 -- Terminal Config -----------------------------------------------------------
 require("toggleterm").setup {
     size = 10,
-    open_mapping = [[<C-t>], [2<C-t>]]
+    open_mapping = [[<C-t>], [2<C-t>]],
+    shell = "powershell"
 }
 
 -- require('nvim-terminal').setup {
@@ -101,7 +115,7 @@ require("toggleterm").setup {
 -- Bufferline Config ---------------------------------------------------------
 require('bufferline').setup {
     options = {
-        separator_style = "slope",
+        separator_style = "slant",
         hover = {
             enabled = true,
             delay = 200,
@@ -110,6 +124,7 @@ require('bufferline').setup {
         indicator = {
             style = 'underline'    
         },
+        diagnostics = "nvim_lsp",
         diagnostics_indicator = function (count, level)
             local icon = level:match("error") and ""
             return " " .. icon .. count
@@ -124,4 +139,3 @@ require('bufferline').setup {
         }
     }
 }
-
